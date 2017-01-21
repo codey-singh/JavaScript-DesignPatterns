@@ -51,3 +51,18 @@ task3.complete();
 task4.complete();
 
 task3.save();
+
+//Using ES6 / ECMAScript2015
+class TaskClass {
+  constructor(name){
+    this.name = name;
+    this.completed = false;
+  }
+  complete(){
+    console.log('Completing task', this.name);
+    this.completed = true;
+  }
+  save(){
+    console.log('saving task', this.name);
+  }
+}
