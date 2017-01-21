@@ -27,15 +27,19 @@ task1.save();
 var TaskWithPrototype = function(name){
   this.name = name;
   this.completed = false;
-  this.save = function(){
-    console.log('saving task', this.name);
-  }
 }
-
 //Doing it this way does't always create a new complete method whenever the 
 //new instance of the TaskWithPrototype class is created (which happens in the last example)..
+/* 
+  ClassName.prototype.methodName = function(){
+    <<method body>>
+  }
+*/
 TaskWithPrototype.prototype.complete = function(){
     console.log('Completing task', this.name);
     this.completed = true;
 }
 
+TaskWithPrototype.prototype.save = function(){
+  console.log('saving task', this.name);
+}
