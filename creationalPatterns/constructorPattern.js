@@ -43,3 +43,11 @@ TaskWithPrototype.prototype.complete = function(){
 TaskWithPrototype.prototype.save = function(){
   console.log('saving task', this.name);
 }
+
+var task3 = new TaskWithPrototype("Buy Milk");
+var task4 = new TaskWithPrototype("Do laundry");
+
+task3.complete();
+task4.complete();
+
+task3.save();
